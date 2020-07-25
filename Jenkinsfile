@@ -59,7 +59,7 @@ def job = {
            does not yet exist on https://packages.confluent.io so we have to query the packaging job for the last
            successful build location (what utilities.getLastNightlyPackagingBaseURL returns). We also override the
            confluent_package_*_suffix to an empty string so it will install the (expected) latest version */
-        override_config['confluent_common_repository_baseurl'] = utilities.getLastNightlyPackagingBaseURL(targetBranch().toString())
+        //override_config['confluent_common_repository_baseurl'] = utilities.getLastNightlyPackagingBaseURL(targetBranch().toString())
         override_config['confluent_package_redhat_suffix'] = ""
         override_config['confluent_package_debian_suffix'] = ""
     }
